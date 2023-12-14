@@ -1,6 +1,8 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import axios from "axios";
 
+
+
 interface Employee {
   id: string;
   firstName: string;
@@ -29,6 +31,7 @@ const Form: React.FC = () => {
         employee
       );
       console.log("Employee added:", response.data);
+      window.location.href = '/';
     } catch (error) {
       console.error("Error adding employee:", error);
     }
